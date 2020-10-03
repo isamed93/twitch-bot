@@ -13,10 +13,23 @@ bot = commands.Bot(
 
 @bot.event
 async def event_ready():
-    # Called once when the bot goes online
+    '''Called once when the bot goes online'''
     print(f"{os.environ['BOT_NICK']} is online")
     ws = bot._ws  # this is only needed to send messages within event_ready
     await ws.send_privmsg(os.environ['CHANNEL'], f"/me has landed!")
+
+@bot.event
+async def event_message(ctx):
+    '''Runs every time a message is sent in chat'''
+    # Make sure the bot ignores itself
+    if ctx.author.name.lower()==os.environ['BOT_NICK'].lower():
+        return
+    # Handle the commands of the message
+    await bot.handle_commands(ctx)
+
+@bot.command(name='test')
+async def test(ctx):
+    await ctx.send('/me test passed!')
 
 
 if __name__ == "__main__":
