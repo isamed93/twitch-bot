@@ -13,3 +13,6 @@ This virtual environment needs the following environment variables:
  - BOT_NICK=<bot_name>
  - BOT_PREFIX=! (or whatever other prefix you want)
  - CHANNEL=#<channel_name>
+
+# Notes
+This bot was developed by following the following [tutorial](https://dev.to/ninjabunny9000/let-s-make-a-twitch-bot-with-python-2nd8)
