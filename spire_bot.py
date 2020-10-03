@@ -10,7 +10,9 @@ bot = commands.Bot(
     initial_channels=[os.environ['CHANNEL']]
 )
 
-multitwitch_link = 'www.multitwitch.tv'
+## Global parameters
+multitwitch_base = 'www.multitwitch.tv'
+multitwitch_link = ''
 multitwitch_on = False
 
 
@@ -59,13 +61,14 @@ async def comm_sens(ctx):
 ## Mod
 @bot.command(name='multitwitch')
 async def comm_multitwitch(ctx):
+    global multitwitch_base
     global multitwitch_link
     global multitwitch_on
     # If the command is run by a mod
     if (ctx.author.is_mod):
         # If command is run with arguments, set up multitwitch
         if(bool(ctx.content.replace("!multitwitch","").strip())):
-            multitwitch_link = multitwitch_link + ctx.content
+            multitwitch_link = multitwitch_base + ctx.content
             multitwitch_link = multitwitch_link.replace('!multitwitch', '')
             multitwitch_link = multitwitch_link.replace(' ', '/')
             multitwitch_on = True
@@ -126,5 +129,4 @@ async def comm_training(ctx):
 
 
 if __name__ == "__main__":
-    ## Global parameters
     bot.run()
