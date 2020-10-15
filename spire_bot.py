@@ -103,7 +103,7 @@ async def comm_bonk(ctx):
 
 
 ## Guild Wars 2
-@bot.command(name='info')
+@bot.command(name='gw2info')
 async def comm_info(ctx):
     await ctx.send_me('Here\'s a few commands for info on the different gamemodes: !pvp !pve !wvw !training')
 
