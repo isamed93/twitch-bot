@@ -105,7 +105,7 @@ async def comm_bonk(ctx):
 ## Guild Wars 2
 @bot.command(name='gw2info')
 async def comm_info(ctx):
-    await ctx.send_me('Here\'s a few commands for info on the different gamemodes: !pvp !pve !wvw !training')
+    await ctx.send_me('Here\'s a few commands for info on the different gamemodes: !pvp !pve !wvw !training !myopinion')
 
 
 @bot.command(name='pve')
@@ -126,6 +126,10 @@ async def comm_wvw(ctx):
 @bot.command(name='training')
 async def comm_training(ctx):
     await ctx.send_me('Raid training: https://snowcrows.com/raids/training/ Fractals training: https://discord.gg/2ReUP7p')
+
+@bot.command(name='myopinion')
+async def comm_training(ctx):
+    await ctx.send_me('Guild Wars 2 is a great game that I spent a lot of hours on. Unfortunately, I have spent so many hours that the game doesn\'t have anything to offer to me and others like me anymore. If you\'re a new player on it, you\'ll have a blast though, I\'m sure!')
 
 
 if __name__ == "__main__":
