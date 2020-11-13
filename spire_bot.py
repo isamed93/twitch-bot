@@ -57,6 +57,14 @@ async def comm_discordmute(ctx):
 async def comm_sens(ctx):
     await ctx.send_me('DPI: 1500 | Ingame: 5 | Scoped: 40')
 
+@bot.command(name='gameform')
+async def comm_sens(ctx):
+    await ctx.send_me('Link to recommend form: https://forms.gle/iqCJLn6hzdxS66E59')
+
+@bot.command(name='gamesheet')
+async def comm_sens(ctx):
+    await ctx.send_me('Link to recommendations sheet: https://docs.google.com/spreadsheets/d/1c6dIJZQqDVswcIPKos4OPVz7ye02pacFAPhINDDzuds/edit?usp=sharing')
+
 
 ## Mod
 @bot.command(name='multitwitch')
