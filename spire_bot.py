@@ -65,6 +65,10 @@ async def comm_sens(ctx):
 async def comm_sens(ctx):
     await ctx.send_me('Link to recommendations sheet: https://docs.google.com/spreadsheets/d/1c6dIJZQqDVswcIPKos4OPVz7ye02pacFAPhINDDzuds/edit?usp=sharing')
 
+@bot.command(name='commission')
+async def comm_sens(ctx):
+    await ctx.send_me('Link to keyboard commissioning form: https://forms.gle/zudnhPGkwwJhJWzL9')
+
 
 ## Mod
 @bot.command(name='multitwitch')
