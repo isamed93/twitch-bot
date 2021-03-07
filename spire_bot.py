@@ -101,7 +101,7 @@ async def comm_so(ctx):
         if(bool(ctx.content.replace("!so","").strip())):
             shoutout_name = ctx.content
             shoutout_name = shoutout_name.replace('!so', '').strip()
-            print(f"Go check out {shoutout_name} at https://www.twitch.tv/{shoutout_name}!")
+            await ctx.send_me(f"Go check out {shoutout_name} at https://www.twitch.tv/{shoutout_name}!")
 
 @bot.command(name='multitwitchoff')
 async def comm_multitwitchoff(ctx):
