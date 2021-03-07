@@ -45,7 +45,7 @@ async def comm_discord(ctx):
 
 @bot.command(name='engineer')
 async def comm_engineer(ctx):
-    await ctx.send_me('Spire graduated from Industrial Electronics and Automation Engineering (think robots) and she works as a Digital Signal Processing Engineer. Feel free to ask her about it!')
+    await ctx.send_me('Spire graduated from Mechatronics Engineering (think robots) and she works as a Digital Signal Processing Engineer. Feel free to ask her about it!')
 
 
 @bot.command(name='discordmute')
@@ -58,15 +58,15 @@ async def comm_sens(ctx):
     await ctx.send_me('DPI: 1500 | Ingame: 5 | Scoped: 40')
 
 @bot.command(name='gameform')
-async def comm_sens(ctx):
+async def comm_gameform(ctx):
     await ctx.send_me('Link to recommend form: https://forms.gle/iqCJLn6hzdxS66E59')
 
 @bot.command(name='gamesheet')
-async def comm_sens(ctx):
+async def comm_gamesheet(ctx):
     await ctx.send_me('Link to recommendations sheet: https://docs.google.com/spreadsheets/d/1c6dIJZQqDVswcIPKos4OPVz7ye02pacFAPhINDDzuds/edit?usp=sharing')
 
 @bot.command(name='commission')
-async def comm_sens(ctx):
+async def comm_commission(ctx):
     await ctx.send_me('Link to keyboard commissioning form: https://forms.gle/zudnhPGkwwJhJWzL9')
 
 
@@ -93,6 +93,15 @@ async def comm_multitwitch(ctx):
             print(f"{ctx.author.name} has disabled multitwitch")
             await ctx.send_me("Watch multiple PoVs at {}".format(multitwitch_link))
 
+@bot.command(name='so')
+async def comm_so(ctx):
+    # If the command is run by a mod
+    if (ctx.author.is_mod):
+        # If command is run with arguments, set up multitwitch
+        if(bool(ctx.content.replace("!so","").strip())):
+            shoutout_name = ctx.content
+            shoutout_name = shoutout_name.replace('!so', '').strip()
+            print(f"Go check out {shoutout_name} at https://www.twitch.tv/{shoutout_name}!")
 
 @bot.command(name='multitwitchoff')
 async def comm_multitwitchoff(ctx):
