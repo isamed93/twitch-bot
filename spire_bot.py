@@ -55,7 +55,7 @@ async def comm_discordmute(ctx):
 
 @bot.command(name='sens')
 async def comm_sens(ctx):
-    await ctx.send_me('DPI: 1500 | Ingame: 5 | Scoped: 40')
+    await ctx.send_me('DPI: 1300 | Overwatch: 5.5 | Apex: 1.6')
 
 @bot.command(name='gameform')
 async def comm_gameform(ctx):
